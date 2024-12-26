@@ -1,8 +1,12 @@
+"use client";
+
 import React from "react";
 import CustomButton from "./CustomButton";
 
 const Hero = () => {
-  const handleScroll = () => {};
+  const handleScroll = () => {
+    handleScroll;
+  };
   return (
     <div className="hero">
       <div className="flex-1 pt-36 padding-x">
