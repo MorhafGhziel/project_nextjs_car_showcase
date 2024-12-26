@@ -10,7 +10,9 @@ const CustomButton = () => {
       type={"button"}
       className={`custom-btn`}
       onClick={() => {}}
-    ></button>
+    >
+      <span className={`flex-1`}>title</span>
+    </button>
   );
 };
 
