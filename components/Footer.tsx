@@ -7,7 +7,9 @@ import { footerLinks } from "@/constants";
 const Footer = () => {
   return (
     <footer className="flex flex-col text-black-100 mt-5 border-t border-gray-100">
+      {/* Top Section */}
       <div className="flex max-md:flex-col flex-wrap justify-between gap-5 sm:px-16 px-6 py-10">
+        {/* Logo and Text */}
         <div className="flex flex-col justify-start items-start gap-6">
           <Image
             src="./Logo.svg"
@@ -20,12 +22,18 @@ const Footer = () => {
             Carhub 2024 <br /> All rights reserved &copy;
           </p>
         </div>
+
+        {/* Footer Links */}
         <div className="footer__links">
           {footerLinks.map((footerLink) => (
             <div key={footerLink.title} className="footer__link">
               <h3 className="font-bold">{footerLink.title}</h3>
               {footerLink.links.map((item) => (
-                <Link key={item.title} href={item.url}>
+                <Link
+                  key={item.title}
+                  href={item.url}
+                  className="text-gray-500 hover:text-black hover:scale-105 transition-transform duration-300"
+                >
                   {item.title}
                 </Link>
               ))}
@@ -34,15 +42,23 @@ const Footer = () => {
         </div>
       </div>
 
+      {/* Bottom Section */}
       <div className="flex justify-center items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10">
         <p>@2024 Carhub. All Rights Reserved</p>
 
-        <div className="footer__copyrights-link">
-          <Link href="/" className="text-gray-500">
+        {/* Privacy Policy and Terms */}
+        <div className="footer__copyrights-link flex gap-4 ml-4">
+          <Link
+            href="/"
+            className="text-gray-500 hover:text-black hover:scale-105 transition-transform duration-300"
+          >
             Privacy Policy
           </Link>
-          <Link href="/" className="text-gray-500">
-            Terms of use
+          <Link
+            href="/"
+            className="text-gray-500 hover:text-black hover:scale-105 transition-transform duration-300"
+          >
+            Terms of Use
           </Link>
         </div>
       </div>
