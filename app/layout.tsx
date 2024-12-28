@@ -17,10 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      {" "}
       {/* Specify the language of the document */}
       <body className="relative">
-        {" "}
         {/* Apply a relative class for layout positioning */}
         {/* Render the Navbar at the top of the page */}
         <Navbar />
