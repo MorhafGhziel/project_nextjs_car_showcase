@@ -18,6 +18,7 @@ const Footer = () => {
             Carhub 2024 <br /> All rights reserved &copy;
           </p>
         </div>
+        <div className="footer__links"></div>
       </div>
     </footer>
   );
