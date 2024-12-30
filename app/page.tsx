@@ -7,6 +7,8 @@ import CarCard from "@/components/CarCard";
 export default async function Home() {
   const allCars = await fetchcars();
 
+  console.log(allCars);
+
   const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
 
   return (
