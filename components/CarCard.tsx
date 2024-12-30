@@ -5,6 +5,7 @@ import React from "react";
 import { useState } from "react";
 import CustomButton from "./CustomButton";
 import { calculateCarRent } from "@/utils";
+import Image from "next/image";
 
 interface CarCardProps {
   car: CarProps;
@@ -28,6 +29,16 @@ const CarCard = ({ car }: CarCardProps) => {
         {CarRent}
         <span className="self-end text-[14px] font-medium">/day</span>
       </p>
+
+      <div className="relative w-full h-40 my-3 object-contain">
+        <Image
+          src="/hero.png"
+          alt="Car model"
+          fill
+          priority
+          className="object-contain"
+        />
+      </div>
     </div>
   );
 };
