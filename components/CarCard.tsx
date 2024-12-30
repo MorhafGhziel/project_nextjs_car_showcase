@@ -11,7 +11,7 @@ interface CarCardProps {
 
 const CarCard = ({ car }: CarCardProps) => {
   const { city_mpg, year, make, model, transmission, drive } = car;
-  return <div>CarCard</div>;
+  return <div className="car-card group"></div>;
 };
 
 export default CarCard;
