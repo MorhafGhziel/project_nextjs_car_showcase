@@ -12,6 +12,8 @@ interface CarCardProps {
 }
 
 const CarCard = ({ car }: CarCardProps) => {
+  // Destructure car properties for easier access.
+
   const { city_mpg, year, make, model, transmission, drive } = car;
 
   const CarRent = calculateCarRent(city_mpg, year);
