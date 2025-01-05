@@ -4,7 +4,7 @@ import React from "react";
 interface CarDetailsProps {
   isOpen: boolean;
   closeModal: () => void;
-  Car: CarProps;
+  car: CarProps;
 }
 
 const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
