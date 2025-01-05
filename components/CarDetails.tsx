@@ -7,7 +7,7 @@ interface CarDetailsProps {
   Car: CarProps;
 }
 
-const CarDetails = () => {
+const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
   return <div>CarDetails</div>;
 };
 
