@@ -54,6 +54,10 @@ const CarCard = ({ car }: CarCardProps) => {
               {transmission === "a" ? "Automatic" : "Manaukl"}
             </p>
           </div>
+          <div className="flex flex-col justify-center items-center gap-2">
+            <Image src="/tire.svg" width={20} height={20} alt="tire" />
+            <p className="text-[14px]">{drive.toUpperCase()}</p>
+          </div>
         </div>
       </div>
     </div>
