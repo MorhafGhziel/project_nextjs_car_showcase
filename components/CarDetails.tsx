@@ -42,7 +42,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                   <button
                     type="button"
                     onClick={closeModal}
-                    className="absolute top-2 right-2 z-10 w-fit bg-primary-blue-100 rounded-full"
+                    className="absolute top-2 right-2 z-10 p-2 w-fit bg-primary-blue-100 rounded-full"
                   >
                     <Image
                       src="/close.svg"
@@ -52,6 +52,10 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                       className="object-contain"
                     />
                   </button>
+
+                  <div className="flex-1 flex flex-col gap-3">
+                    <div className="relative w-full h-40 bg-pattern bg-cover bg-center rounded-lg"></div>
+                  </div>
                 </Dialog.Panel>
               </Transition.Child>
             </div>
