@@ -104,7 +104,10 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                           className="flex justify-between gap-5 w-full text-right"
                           key={key}
                         >
-                          <h4 className="text-gray capitalize"> {key} </h4>
+                          <h4 className="text-gray capitalize">
+                            {" "}
+                            {key.split("_").join(" ")}{" "}
+                          </h4>
                           <p> {value} </p>
                         </div>
                       ))}
