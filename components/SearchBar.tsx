@@ -1,28 +1,32 @@
 "use client";
 
-import React from "react";
-
-import { useState } from "react";
-
+import React, { useState } from "react";
+import Image from "next/image";
 import SearchManufacturer from "./SearchManufacturer";
 
-import Image from "next/image";
-
 const SearchButton = ({ otherClasses }: { otherClasses: string }) => {
-  <button className={`-ml-3 z-10`} type="submit">
-    <Image
-      src="/magnifying-glass.svg"
-      alt="magnifying glass"
-      width={40}
-      height={40}
-      className="object-contain"
-    />
-  </button>;
+  return (
+    <button className={`-ml-3 z-10 ${otherClasses}`} type="submit">
+      <Image
+        src="/magnifying-glass.svg"
+        alt="magnifying glass"
+        width={40}
+        height={40}
+        className="object-contain"
+      />
+    </button>
+  );
 };
 
 const SearchBar = () => {
   const [manufacturer, setManufacturer] = useState("");
-  const handleSearch = () => {};
+  const [model, setModel] = useState("");
+
+  const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    console.log({ manufacturer, model }); // Example search logic
+  };
+
   return (
     <form className="searchbar" onSubmit={handleSearch}>
       <div className="searchbar__item">
