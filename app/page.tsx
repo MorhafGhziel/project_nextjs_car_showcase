@@ -3,9 +3,16 @@ import SearchBar from "@/components/SearchBar";
 import CustomFilter from "@/components/CustomFilter";
 import { fetchcars } from "@/utils";
 import CarCard from "@/components/CarCard";
+import { manufacturers } from "@/constants";
 
-export default async function Home() {
-  const allCars = await fetchcars();
+export default async function Home({ searchParams }) {
+  const allCars = await fetchcars({
+    manufacturer: searchParams.manufacturer || "",
+    year: searchParams.year || 2022,
+    fuel: searchParams.fuel || "",
+    limit: searchParams.limit || 10,
+    model: searchParams.model || "",
+  });
 
   console.log(allCars);
 
