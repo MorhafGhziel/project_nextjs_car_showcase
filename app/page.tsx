@@ -37,8 +37,11 @@ export default async function Home({ searchParams }: HomeProps) {
         {!isDataEmpty ? (
           <section>
             <div className="home__cars-wrapper">
-              {allCars?.map((car) => (
-                <CarCard key={car.id} car={car} /> // Ensure 'key' prop is present
+              {allCars?.map((car, index) => (
+                <CarCard
+                  key={car.id || `${car.make}-${car.model}-${index}`}
+                  car={car}
+                />
               ))}
             </div>
 
