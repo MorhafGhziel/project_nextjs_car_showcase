@@ -33,7 +33,13 @@ const SearchBar = () => {
         <SearchButton otherClasses="sm:hidden" />
       </div>
       <div className="searchbar__item">
-        <Image src="/model-icon.png" alt="car model" height={25} width={25} />
+        <Image
+          src="/model-icon.png"
+          alt="car model"
+          height={25}
+          width={25}
+          className="absolute w-[20px] h-[20px] ml-4"
+        />
       </div>
     </form>
   );
