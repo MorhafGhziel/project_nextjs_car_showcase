@@ -17,13 +17,13 @@ export default async function Home() {
       <div className="mt-12 padding-y padding-x max-w" id="discover">
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">Car Catalogue</h1>
-          <p>Explore the cars u might like</p>
+          <p>Explore the cars you might like</p>
         </div>
         <div className="home__filters">
           <SearchBar />
 
           <div className="home__filter-container">
-            <CustomFilter title="feul" />
+            <CustomFilter title="fuel" />
             <CustomFilter title="year" />
           </div>
         </div>
@@ -32,7 +32,11 @@ export default async function Home() {
           <section>
             <div className="home__cars-wrapper">
               {allCars?.map((car) => (
-                <CarCard car={car} />
+                // Add a unique key for each CarCard
+                <CarCard
+                  key={car.id || `${car.make}-${car.model}-${car.year}`}
+                  car={car}
+                />
               ))}
             </div>
           </section>
