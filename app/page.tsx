@@ -22,7 +22,7 @@ export default async function Home({ searchParams }: HomeProps) {
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold">Car Catalogue</h1>
-          <p>Explore out cars you might like</p>
+          <p>Explore our cars you might like</p>
         </div>
 
         <div className="home__filters">
@@ -38,7 +38,7 @@ export default async function Home({ searchParams }: HomeProps) {
           <section>
             <div className="home__cars-wrapper">
               {allCars?.map((car) => (
-                <CarCard car={car} />
+                <CarCard key={car.id} car={car} /> // Ensure 'key' prop is present
               ))}
             </div>
 
@@ -50,7 +50,11 @@ export default async function Home({ searchParams }: HomeProps) {
         ) : (
           <div className="home__error-container">
             <h2 className="text-black text-xl font-bold">Oops, no results</h2>
-            <p>{allCars}</p>
+            <p>
+              {Array.isArray(allCars)
+                ? "No cars found matching your criteria"
+                : "An error occurred"}
+            </p>
           </div>
         )}
       </div>
