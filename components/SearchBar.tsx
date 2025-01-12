@@ -24,7 +24,9 @@ const SearchBar = () => {
 
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log({ manufacturer, model }); // Example search logic
+    if (manufacturer.trim() === "" && model.trim() === "") {
+      return alert("Please provide some input");
+    }
   };
 
   return (
