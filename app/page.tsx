@@ -22,7 +22,7 @@ export default async function Home({ searchParams }: HomeProps) {
       <div className="mt-12 padding-x padding-y max-width" id="discover">
         <div className="home__text-container">
           <h1 className="text-4xl font-extrabold"> </h1>
-          <p> our </p>
+          <p> vadvsvs </p>
         </div>
 
         <div className="home__filters">
