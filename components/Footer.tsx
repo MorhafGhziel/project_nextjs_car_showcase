@@ -52,7 +52,7 @@ const Footer = () => {
       {/* Bottom Section */}
       <div className="flex justify-center items-center flex-wrap mt-10 border-t border-gray-100 sm:px-16 px-6 py-10">
         {/* Footer copyright text */}
-        <p>@2024 Carhub. All Rights </p>
+        <p>@2024 Carhub. All </p>
 
         {/* Privacy Policy and Terms links */}
         <div className="footer__copyrights-link flex gap-4 ml-4">
